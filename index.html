@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customer Analytics Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2> Segmentation</h2>
+    <p>Dashboard</p>
+    <p>Analytics</p>
+    <p>Prediction</p>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+
+    <h1>Customer Analytics Dashboard</h1>
+
+    <!-- STATS -->
+    <div class="stats">
+      <div class="card stat">
+        <h3>Total Customers</h3>
+        <p id="total"></p>
+      </div>
+
+      <div class="card stat">
+        <h3>Avg Income</h3>
+        <p id="avgIncome"></p>
+      </div>
+
+      <div class="card stat">
+        <h3>Avg Score</h3>
+        <p id="avgScore"></p>
+      </div>
+    </div>
+
+    <!-- CHART -->
+    <div class="card">
+      <h2>Customer Distribution</h2>
+      <div class="chart-box">
+        <canvas id="chart"></canvas>
+      </div>
+    </div>
+
+    <!-- PREDICTION -->
+    <div class="card">
+      <h2>Predict Customer Segment</h2>
+
+      <div class="inputs">
+        <input id="income" placeholder="Income (15–100)">
+        <input id="score" placeholder="Score (1–100)">
+      </div>
+
+      <button onclick="predict()">Predict</button>
+
+      <h3 id="result"></h3>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
